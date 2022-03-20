@@ -19,6 +19,7 @@ class StartViewController: UIViewController {
     }
 }
 
+//MARK: - Delegate Method for return data
 extension StartViewController: SettingVCDelegate {
     func setColor(color: UIColor) {
         var red: CGFloat = 0

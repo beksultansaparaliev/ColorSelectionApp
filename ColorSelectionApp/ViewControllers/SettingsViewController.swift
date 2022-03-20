@@ -123,9 +123,8 @@ class SettingsViewController: UIViewController {
     }
 }
 
-//MARK: - TextFieldDelegate
+//MARK: - TextFieldDelegate Methods
 extension SettingsViewController: UITextFieldDelegate {
-    
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
         textField.inputAccessoryView = toolbar
         return true
@@ -133,7 +132,10 @@ extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
-        guard let numberValue = Float(newValue) else { return }
+        guard let numberValue = Float(newValue) else {
+            showAlert(for: textField)
+            return
+        }
         
         if textField == redTextField {
             redSlider.setValue(Float(numberValue), animated: true)
@@ -150,4 +152,14 @@ extension SettingsViewController: UITextFieldDelegate {
     }
 }
 
-
+//MARK: - Set Alert Controller Method
+extension SettingsViewController {
+    private func showAlert(for textField: UITextField) {
+        let alert = UIAlertController(title: "Ошибка", message: "Введите числовое значение", preferredStyle: .alert)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            textField.text = ""
+        }
+        alert.addAction(okAction)
+        present(alert, animated: true)
+    }
+}
