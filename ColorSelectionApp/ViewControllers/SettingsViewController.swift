@@ -42,7 +42,7 @@ class SettingsViewController: UIViewController {
         view.endEditing(true)
     }
     
-    @IBAction func doneToolbarItem(_ sender: UIBarButtonItem) {
+    @IBAction func toolbarItem(_ sender: UIBarButtonItem) {
         view.endEditing(true)
     }
     
@@ -123,7 +123,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-//MARK: - TextField
+//MARK: - TextFieldDelegate
 extension SettingsViewController: UITextFieldDelegate {
     
     func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
