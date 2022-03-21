@@ -39,6 +39,7 @@ class SettingsViewController: UIViewController {
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
     
@@ -106,16 +107,11 @@ class SettingsViewController: UIViewController {
     }
     
     private func setColorAfterSegue() {
-        var red: CGFloat = 0
-        var green: CGFloat = 0
-        var blue: CGFloat = 0
-        var alpha: CGFloat = 0
+        let ciColor = CIColor(color: color)
         
-        color.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-        
-        redSlider.value = Float(red)
-        greenSlider.value = Float(green)
-        blueSlider.value = Float(blue)
+        redSlider.value = Float(ciColor.red)
+        greenSlider.value = Float(ciColor.green)
+        blueSlider.value = Float(ciColor.blue)
         
         setColor()
         setValueForLabel(from: redLabel, greenLabel, blueLabel)
@@ -125,14 +121,14 @@ class SettingsViewController: UIViewController {
 
 //MARK: - TextFieldDelegate Methods
 extension SettingsViewController: UITextFieldDelegate {
-    func textFieldShouldBeginEditing(_ textField: UITextField) -> Bool {
+    func textFieldDidBeginEditing(_ textField: UITextField) {
         textField.inputAccessoryView = toolbar
-        return true
     }
     
     func textFieldDidEndEditing(_ textField: UITextField) {
         guard let newValue = textField.text else { return }
-        guard let numberValue = Float(newValue) else {
+        guard let numberValue = Float(newValue) else { return }
+        guard numberValue <= 1 && numberValue >= 0 else {
             showAlert(for: textField)
             return
         }
@@ -155,7 +151,7 @@ extension SettingsViewController: UITextFieldDelegate {
 //MARK: - Set Alert Controller Method
 extension SettingsViewController {
     private func showAlert(for textField: UITextField) {
-        let alert = UIAlertController(title: "Ошибка", message: "Введите числовое значение", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Ошибка", message: "Введите корректное значение", preferredStyle: .alert)
         let okAction = UIAlertAction(title: "OK", style: .default) { _ in
             textField.text = ""
         }

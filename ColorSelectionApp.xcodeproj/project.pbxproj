@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5D561BE427E51E7A00A70223 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BE327E51E7A00A70223 /* StartViewController.swift */; };
+		5D561BE427E51E7A00A70223 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D561BE327E51E7A00A70223 /* MainViewController.swift */; };
 		5DDAB68727D256BB00A31358 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDAB68627D256BB00A31358 /* AppDelegate.swift */; };
 		5DDAB68927D256BB00A31358 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDAB68827D256BB00A31358 /* SceneDelegate.swift */; };
 		5DDAB68B27D256BB00A31358 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DDAB68A27D256BB00A31358 /* SettingsViewController.swift */; };
@@ -17,7 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5D561BE327E51E7A00A70223 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		5D561BE327E51E7A00A70223 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		5DDAB68327D256BB00A31358 /* ColorSelectionApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ColorSelectionApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5DDAB68627D256BB00A31358 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5DDAB68827D256BB00A31358 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 		5D561BE127E51C2300A70223 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				5D561BE327E51E7A00A70223 /* StartViewController.swift */,
+				5D561BE327E51E7A00A70223 /* MainViewController.swift */,
 				5DDAB68A27D256BB00A31358 /* SettingsViewController.swift */,
 			);
 			path = ViewControllers;
@@ -174,7 +174,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5DDAB68B27D256BB00A31358 /* SettingsViewController.swift in Sources */,
-				5D561BE427E51E7A00A70223 /* StartViewController.swift in Sources */,
+				5D561BE427E51E7A00A70223 /* MainViewController.swift in Sources */,
 				5DDAB68727D256BB00A31358 /* AppDelegate.swift in Sources */,
 				5DDAB68927D256BB00A31358 /* SceneDelegate.swift in Sources */,
 			);
