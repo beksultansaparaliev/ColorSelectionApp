@@ -16,7 +16,7 @@ class ToolBarViewController: UIViewController {
         setToolbar()
     }
     
-    @objc func tapDone() {
+    @objc private func tapDone() {
         view.endEditing(true)
     }
     
