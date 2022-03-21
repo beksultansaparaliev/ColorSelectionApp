@@ -194,22 +194,9 @@
                         <outlet property="redLabel" destination="qjk-O3-Ynt" id="gS3-Fl-ggu"/>
                         <outlet property="redSlider" destination="ZyW-Wc-xGb" id="zM8-5u-Xxi"/>
                         <outlet property="redTextField" destination="AdX-Pr-dDX" id="aDj-wy-Uyy"/>
-                        <outlet property="toolbar" destination="3ym-QJ-3mo" id="sNs-4t-4xe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="3ym-QJ-3mo">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
-                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                    <items>
-                        <barButtonItem style="plain" systemItem="flexibleSpace" id="ocz-Q5-cnY"/>
-                        <barButtonItem systemItem="done" id="QFG-s4-BNh">
-                            <connections>
-                                <action selector="toolbarItem:" destination="BYZ-38-t0r" id="0Ll-rj-f9T"/>
-                            </connections>
-                        </barButtonItem>
-                    </items>
-                </toolbar>
             </objects>
             <point key="canvasLocation" x="862.5" y="66.549295774647888"/>
         </scene>
